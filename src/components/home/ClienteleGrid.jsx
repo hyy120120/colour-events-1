@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Star } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 
 export default function ClienteleGrid() {
   return (
     <section id="clientele" className="py-28 bg-[#050507] text-white border-t border-white/5 relative">
+      {/* Ambient Glow */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-red-600/10 blur-[150px] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Info Column */}
@@ -15,50 +18,60 @@ export default function ClienteleGrid() {
             <div className="flex items-center gap-3">
               <span className="w-8 h-[1px] bg-red-500" />
               <span className="text-xs uppercase tracking-[0.3em] font-mono text-red-500 font-bold">
-                Iconic Partners
+                Who We Work With
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black font-heading tracking-tight uppercase leading-tight">
-              Who We Work With
+            <h2 className="heading-primary">
+              Iconic Partners
             </h2>
 
             <p className="text-gray-300 text-base leading-relaxed font-light">
-              We have been entrusted by global market leaders, world sports governing bodies, music titans, and revolutionary disruptors across industries.
+              We have been entrusted by renowned institutions, trade guilds, wedding venues, and disruptors across India to deliver landmark activations.
             </p>
 
             <div className="pt-4">
-              <Link href="/connect" className="btn-primary">
-                <span>Become A Partner</span>
+              <Link href="/contact" className="btn-primary">
+                <span>View Full Clientele</span>
                 <ArrowRight className="w-4 h-4 btn-arrow" />
               </Link>
             </div>
           </div>
 
-          {/* Right Logo Grid */}
-          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {/* Right 3D Flip Card Grid Inspired by DNA Networks */}
+          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-5">
             {siteConfig.clientele.map((client, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.05 * idx }}
-                className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-red-500/60 hover:bg-white/[0.06] transition-all duration-300 flex flex-col items-center justify-center text-center h-36"
+                transition={{ duration: 0.5, delay: 0.05 * idx }}
+                className="logo-card-perspective h-40 cursor-pointer"
               >
-                <ShieldCheck className="w-6 h-6 text-red-500/70 mb-2 group-hover:scale-125 group-hover:text-red-500 transition-all duration-300" />
+                <div className="logo-card-inner">
+                  {/* Front Card Face */}
+                  <div className="logo-card-front shadow-xl">
+                    <ShieldCheck className="w-7 h-7 text-red-500 mb-2" />
+                    <h4 className="text-base font-bold font-heading text-white text-center">
+                      {client.name}
+                    </h4>
+                    <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mt-1">
+                      {client.category}
+                    </span>
+                  </div>
 
-                <h4 className="text-base font-bold font-heading text-white group-hover:text-red-400 transition-colors">
-                  {client.name}
-                </h4>
-
-                <span className="text-[10px] uppercase font-mono text-gray-400 mt-1 tracking-widest">
-                  {client.category}
-                </span>
-
-                <span className="absolute top-2 right-2 text-[9px] font-mono text-red-500/80 opacity-0 group-hover:opacity-100 transition-opacity">
-                  {client.tag}
-                </span>
+                  {/* Back Card Face (Revealed on 3D Flip) */}
+                  <div className="logo-card-back shadow-2xl">
+                    <Star className="w-5 h-5 text-amber-400 mb-1" />
+                    <span className="text-xs font-mono font-bold text-white uppercase tracking-widest text-center">
+                      {client.tag}
+                    </span>
+                    <span className="text-[10px] text-gray-300 font-mono mt-1">
+                      Verified Client
+                    </span>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

@@ -15,7 +15,7 @@ export default function LeadershipSection() {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Executive Image Column (Cols 1-5) */}
+          {/* Executive Image Column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -23,21 +23,21 @@ export default function LeadershipSection() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative h-[480px] md:h-[560px] rounded-3xl overflow-hidden border border-white/15 shadow-2xl">
+            <div className="relative h-[480px] md:h-[560px] rounded-3xl overflow-hidden border border-white/15 shadow-2xl group">
               <Image
                 src={leadership.image}
                 alt={leadership.founderName}
                 fill
-                className="object-cover object-top filter contrast-105 brightness-90"
+                className="object-cover object-top filter contrast-105 brightness-90 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent" />
 
-              {/* Signature Overlay */}
-              <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10">
-                <span className="font-serif italic text-2xl md:text-3xl tracking-wide text-red-400">
+              {/* Signature Overlay Inspired by DNA Networks */}
+              <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-black/70 backdrop-blur-md border border-white/10 flex flex-col justify-between">
+                <span className="font-serif italic text-2xl md:text-3xl tracking-wide text-red-400 font-bold">
                   {leadership.signatureText}
                 </span>
-                <div className="mt-2 text-xs font-mono uppercase tracking-widest text-gray-300">
+                <div className="mt-2 text-xs font-mono uppercase tracking-widest text-gray-200 font-bold">
                   {leadership.founderName}
                 </div>
                 <div className="text-[10px] uppercase font-mono tracking-widest text-red-500 font-bold">
@@ -47,7 +47,7 @@ export default function LeadershipSection() {
             </div>
           </motion.div>
 
-          {/* Executive Quote Column (Cols 6-12) */}
+          {/* Executive Quote Column */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -75,12 +75,12 @@ export default function LeadershipSection() {
 
             <div className="pt-4 grid grid-cols-2 gap-6 border-t border-white/10 text-xs font-mono">
               <div>
-                <span className="text-gray-400 block uppercase tracking-widest">Industry Service</span>
-                <span className="text-xl font-bold font-heading text-white">40+ Years</span>
+                <span className="text-gray-400 block uppercase tracking-widest">Showcase Milestones</span>
+                <span className="text-xl font-bold font-heading text-white">680+ Executed</span>
               </div>
               <div>
-                <span className="text-gray-400 block uppercase tracking-widest">Milestone Events</span>
-                <span className="text-xl font-bold font-heading text-red-400">10,000+ Delivered</span>
+                <span className="text-gray-400 block uppercase tracking-widest">Production Heritage</span>
+                <span className="text-xl font-bold font-heading text-red-400">15+ Years</span>
               </div>
             </div>
           </motion.div>

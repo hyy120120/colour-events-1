@@ -5,8 +5,9 @@ export const siteConfig = {
   heroTitle: "Celebrations & Activations Redefined.",
   heroTagline: "Surat's Premier Destination Wedding, Corporate Activation & Exhibition Powerhouse.",
   
-  // Replace this video URL or local file path (/assets/your-video.mp4) with your own hero video reel
-  heroVideoUrl: "https://assets.mixkit.co/videos/preview/mixkit-concert-crowd-cheering-in-front-of-the-stage-41474-large.mp4",
+  // Mapped directly to your uploaded video in public/assets/hero-video.mp4
+  heroVideoUrl: "/assets/hero-video.mp4",
+  heroVideoFallbackUrl: "https://assets.mixkit.co/videos/preview/mixkit-concert-crowd-cheering-in-front-of-the-stage-41474-large.mp4",
   heroVideoPoster: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1920",
 
   aboutStatement: "Pioneers in luxury weddings, high-impact brand activations, and grand exhibitions, turning visions into monumental celebrations.",
@@ -37,13 +38,18 @@ export const siteConfig = {
       hoverImage: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200"
     },
     { 
+      label: "Process", 
+      href: "/process",
+      hoverImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200"
+    },
+    { 
       label: "Clientele", 
       href: "/#clientele",
       hoverImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200"
     },
     { 
-      label: "Connect", 
-      href: "/connect",
+      label: "Contact", 
+      href: "/contact",
       hoverImage: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=1200"
     }
   ],

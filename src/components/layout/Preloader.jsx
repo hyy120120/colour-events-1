@@ -14,12 +14,12 @@ export default function Preloader() {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(() => setIsLoading(false), 400);
+          setTimeout(() => setIsLoading(false), 500);
           return 100;
         }
-        return prev + 5;
+        return prev + 4;
       });
-    }, 40);
+    }, 35);
 
     return () => clearInterval(interval);
   }, []);
@@ -28,54 +28,59 @@ export default function Preloader() {
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          key="preloader"
+          key="preloader-curtain"
           initial={{ y: 0 }}
-          exit={{ y: "-100%", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#050507] text-white"
+          exit={{
+            y: "-100%",
+            transition: { duration: 0.85, ease: [0.76, 0, 0.24, 1] }
+          }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#050507] text-white overflow-hidden"
         >
-          {/* Background Ambient Glow */}
-          <div className="absolute w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none animate-pulseGlow" />
+          {/* Ambient Glow Pulse */}
+          <div className="absolute w-[500px] h-[500px] bg-red-600/15 rounded-full blur-[140px] pointer-events-none animate-pulseGlow" />
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center gap-6"
-          >
-            {/* Logo */}
-            <div className="relative w-36 h-36 md:w-44 md:h-44">
+          {/* SVG Mask Container Inspired by DNA Networks */}
+          <div className="relative flex flex-col items-center gap-6 z-10 px-6 text-center">
+            {/* Logo Reveal */}
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+              className="relative w-36 h-36 md:w-44 md:h-44"
+            >
               <Image
                 src={siteConfig.logoUrl}
                 alt={siteConfig.brandName}
                 fill
                 priority
-                className="object-contain drop-shadow-[0_0_25px_rgba(229,45,39,0.4)]"
+                className="object-contain drop-shadow-[0_0_35px_rgba(229,45,39,0.5)]"
               />
-            </div>
+            </motion.div>
 
-            {/* Typography */}
-            <div className="text-center">
-              <h2 className="text-2xl md:text-3xl font-extrabold tracking-widest font-heading text-white">
+            {/* Title */}
+            <div>
+              <h1 className="text-3xl md:text-4xl font-black font-heading tracking-widest text-white uppercase">
                 {siteConfig.brandName}
-              </h2>
-              <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mt-1">
+              </h1>
+              <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-mono mt-1">
                 {siteConfig.brandSubtitle}
               </p>
             </div>
 
-            {/* Progress Bar & Counter */}
-            <div className="w-56 mt-4 flex flex-col items-center gap-2">
+            {/* Progress Counter & Animated Bar */}
+            <div className="w-64 mt-6 flex flex-col items-center gap-2">
               <div className="w-full h-[2px] bg-white/10 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-red-600 to-amber-500"
+                  className="h-full bg-gradient-to-r from-red-600 via-amber-500 to-white"
                   style={{ width: `${progress}%` }}
                 />
               </div>
-              <span className="text-xs tracking-widest text-gray-400 font-mono">
-                {progress}%
-              </span>
+              <div className="flex justify-between w-full text-[10px] font-mono tracking-widest text-gray-400 mt-1">
+                <span>LOADING EXPERIENCE</span>
+                <span className="text-red-400 font-bold">{progress}%</span>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

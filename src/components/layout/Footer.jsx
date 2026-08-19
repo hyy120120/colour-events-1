@@ -19,10 +19,10 @@ export default function Footer() {
       <div className="w-full overflow-hidden whitespace-nowrap pb-16 border-b border-white/10 select-none">
         <div className="inline-block animate-marquee">
           <span className="text-6xl md:text-8xl font-black font-heading tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-red-600 opacity-20 uppercase mx-8">
-            {siteConfig.brandName} • {siteConfig.heroTitle} • STADIUM SPORTS • CONCERTS • 
+            {siteConfig.brandName} • WEDDINGS • BRAND ACTIVATIONS • EXHIBITIONS • 
           </span>
           <span className="text-6xl md:text-8xl font-black font-heading tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-red-600 opacity-20 uppercase mx-8">
-            {siteConfig.brandName} • {siteConfig.heroTitle} • STADIUM SPORTS • CONCERTS • 
+            {siteConfig.brandName} • WEDDINGS • BRAND ACTIVATIONS • EXHIBITIONS • 
           </span>
         </div>
       </div>
@@ -53,7 +53,7 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-4 pt-2">
-            <Link href="/connect" className="btn-primary">
+            <Link href="/contact" className="btn-primary">
               <span>Start A Project</span>
               <ExternalLink className="w-4 h-4 btn-arrow" />
             </Link>
@@ -124,7 +124,7 @@ export default function Footer() {
 
       {/* Bottom Bar & Scroll to top */}
       <div className="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-        <p>© {new Date().getFullYear()} {siteConfig.brandName} Entertainment. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} {siteConfig.brandName} Events & Activations. All rights reserved.</p>
 
         <button
           onClick={scrollToTop}
