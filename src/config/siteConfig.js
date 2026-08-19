@@ -1,21 +1,21 @@
 export const siteConfig = {
   brandName: "COLOURS",
-  brandSubtitle: "ENTERTAINMENT NETWORKS",
+  brandSubtitle: "EVENTS & ACTIVATIONS",
   logoUrl: "/assets/logo.png",
-  heroTitle: "Entertainment Redefined.",
-  heroTagline: "Crafting Unforgettable Live Spectacles Worldwide.",
+  heroTitle: "Celebrations & Activations Redefined.",
+  heroTagline: "Surat's Premier Destination Wedding, Corporate Activation & Exhibition Powerhouse.",
   
   // Replace this video URL or local file path (/assets/your-video.mp4) with your own hero video reel
   heroVideoUrl: "https://assets.mixkit.co/videos/preview/mixkit-concert-crowd-cheering-in-front-of-the-stage-41474-large.mp4",
-  heroVideoPoster: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=1920",
+  heroVideoPoster: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1920",
 
-  aboutStatement: "Pioneers in live music, stadium sports & immersive event production, creating monumental experiences across the globe.",
+  aboutStatement: "Pioneers in luxury weddings, high-impact brand activations, and grand exhibitions, turning visions into monumental celebrations.",
   
   stats: [
-    { number: "40+", label: "Years of Heritage", description: "Pioneering live event production" },
-    { number: "650+", label: "Events per Year", description: "Executed seamlessly across continents" },
-    { number: "7", label: "Global Hubs", description: "Production centers & broadcast units" },
-    { number: "12M+", label: "Audience Impact", description: "Fans engaged in live stadiums" }
+    { number: "680+", label: "Projects Completed", description: "From Instagram & verified showcases" },
+    { number: "15+", label: "Years of Excellence", description: "Pioneering event architecture in Gujarat" },
+    { number: "3,000+", label: "Community Followers", description: "Engaged clients & event enthusiasts" },
+    { number: "100%", label: "Turnkey Execution", description: "Concept, decor, lighting & hospitality" }
   ],
 
   menuItems: [
@@ -23,18 +23,18 @@ export const siteConfig = {
     { 
       label: "Work", 
       href: "/work",
-      hoverImage: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=1200",
+      hoverImage: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200",
       subCategories: [
-        { name: "Sports Events", href: "/work?category=Sports" },
-        { name: "Music Festivals", href: "/work?category=Music" },
-        { name: "Corporate Summits", href: "/work?category=Corporate" },
-        { name: "Special Spectacles", href: "/work?category=Special" }
+        { name: "Luxury Weddings", href: "/work?category=Wedding" },
+        { name: "Brand Activations", href: "/work?category=Corporate" },
+        { name: "Exhibitions", href: "/work?category=Exhibition" },
+        { name: "Fashion & Special", href: "/work?category=Special" }
       ]
     },
     { 
       label: "Services", 
       href: "/services",
-      hoverImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200"
+      hoverImage: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200"
     },
     { 
       label: "Clientele", 
@@ -50,146 +50,123 @@ export const siteConfig = {
 
   projects: [
     {
-      id: "world-cricket-trophy-reveal",
-      title: "Global Sports League Championship",
-      category: "Sports",
-      location: "Wankhede Stadium, Mumbai",
-      coverImage: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=1200",
-      gallery: [
-        "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=1200"
-      ],
-      description: "End-to-end stadium branding, laser light choreography, high-octane pyro display, and live global broadcast execution for 50,000+ stadium spectators.",
-      highlights: ["50,000+ Live Audience", "3D Projection Mapping", "Ultra-HD Live Broadcast Feed"]
-    },
-    {
-      id: "electric-horizon-music-fest",
-      title: "Electric Horizon Arena World Tour",
-      category: "Music",
-      location: "Bandra-Kurla Grounds",
-      coverImage: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=1200",
-      gallery: [
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200"
-      ],
-      description: "A monumental 3-day outdoor music arena featuring custom 40-meter LED mainstage architecture, synchronized flame cannons, and spatial Dolby sound systems.",
-      highlights: ["75,000+ Fans", "Custom 40m Stage Rig", "120kw Sound Array"]
-    },
-    {
-      id: "apex-tech-summit-2026",
-      title: "Apex Next-Gen Brand Keynote",
-      category: "Corporate",
-      location: "Jio World Convention Centre",
+      id: "arasa-annual-interior-exhibition",
+      title: "ARASA Annual Interior & Design Exhibition",
+      category: "Exhibition",
+      location: "IIFD Campus, Surat",
       coverImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
       gallery: [
         "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
         "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200"
       ],
-      description: "Futuristic corporate reveal with seamless curved LED walls, AI interaction pods, hologram keynotes, and executive lounge design.",
-      highlights: ["Hologram Keynote", "Curved LED Canvas", "VIP Executive Experience"]
+      description: "Turnkey exhibition management for IIFD ARASA, featuring custom booth fabrications, VIP inauguration ceremonies, design student displays, and lighting design.",
+      highlights: ["Custom Booth Fabrication", "VIP Inauguration Stage", "5,000+ Visitors"]
     },
     {
-      id: "royal-palace-heritage-gala",
-      title: "Royal Palace Heritage Spectacle",
-      category: "Special",
-      location: "Shivavilas Palace Estate",
+      id: "utsav-vatika-royal-wedding",
+      title: "Royal Destination Wedding at Utsav Vatika",
+      category: "Wedding",
+      location: "Utsav Vatika, Dumas Road, Surat",
       coverImage: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200",
       gallery: [
         "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200",
         "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=1200"
       ],
-      description: "Regal heritage event combining vintage architectural illumination, orchestral stage setups, and luxury guest management.",
-      highlights: ["Heritage Illumination", "Orchestral Production", "Luxury Concierge"]
+      description: "A grand 3-day wedding spectacle featuring a regal floral mandap, grand entry pathway, customized Haldi/Sangeet decor, and full guest hospitality.",
+      highlights: ["Custom Floral Mandap", "Grand Entry Illumination", "Full Guest Logistics"]
     },
     {
-      id: "vanguard-automotive-launch",
-      title: "Vanguard EV Global Unveil",
+      id: "vesu-sangeet-musical-gala",
+      title: "Vesu Luxury Sangeet & Musical Night",
+      category: "Wedding",
+      location: "Vesu Lawn Estate, Surat",
+      coverImage: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=1200",
+      gallery: [
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=1200"
+      ],
+      description: "High-octane musical night with 30m LED stage backdrop, concert-grade sound arrays, interactive dancefloor lighting, and celebrity performances.",
+      highlights: ["30m Stage LED Canvas", "Concert Sound Array", "Interactive Choreography"]
+    },
+    {
+      id: "surat-corporate-brand-activation",
+      title: "Surat Leadership Summit & Brand Launch",
       category: "Corporate",
-      location: "New Delhi Expo Mart",
-      coverImage: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200",
+      location: "Piplod Convention Center, Surat",
+      coverImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
       gallery: [
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&q=80&w=1200"
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200"
       ],
-      description: "Automotive kinetic glass reveal, real-time telemetry screen sync, and immersive media launch.",
-      highlights: ["Kinetic Glass Rigging", "Real-Time Telemetry", "Global Media Stream"]
+      description: "Sleek corporate keynote setup with curved LED displays, keynote staging, product launch unveil, and executive networking lounge.",
+      highlights: ["Curved LED Screen", "Product Unveil Mechanism", "VIP Lounge Design"]
     },
     {
-      id: "stadium-symphony-super-cup",
-      title: "National Premier League Final Ceremony",
-      category: "Sports",
-      location: "Kolkata Stadium Complex",
-      coverImage: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&q=80&w=1200",
+      id: "surat-couture-fashion-runway",
+      title: "Surat Fashion Week Runway",
+      category: "Special",
+      location: "Grand Ballroom, Surat",
+      coverImage: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80&w=1200",
       gallery: [
-        "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&q=80&w=1200"
+        "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80&w=1200"
       ],
-      description: "Full-field light show with drone swarm choreography, live musical performances, and medal presentation stage production.",
-      highlights: ["Drone Swarm Show", "Full Stadium Light Grid", "60,000 Attendance"]
+      description: "High-fashion runway production with precision spotlighting, backstage coordination, live DJ stream, and designer showcases.",
+      highlights: ["25m Runway Setup", "Precision Spotlighting", "Backstage Logistics"]
     }
   ],
 
   services: [
     {
-      title: "Stadium & Sports Engineering",
-      subtitle: "Turnkey Sports Production",
-      description: "From FIFA & IPL scale league openers to championship trophy ceremonies, we engineer pitch branding, LED perimeters, stadium lighting, and broadcast integration.",
-      icon: "Trophy"
-    },
-    {
-      title: "Mega Concert Production",
-      subtitle: "World Tour Arenas",
-      description: "Custom trussing, 3D spatial acoustic engineering, dynamic video wall scenery, pyrotechnics, and artist hospitality for stadium music tours.",
+      title: "Destination & Luxury Weddings",
+      subtitle: "Full-Service Wedding Planning",
+      description: "From Haldi & Sangeet concept design to grand Mandap installation, we curate unforgettable wedding experiences across Gujarat & top destination venues.",
       icon: "Music"
     },
     {
-      title: "Corporate Experience Design",
-      subtitle: "Keynotes & Brand Launches",
-      description: "Immersive keynotes, product unveils, multi-city dealer meets, and high-impact brand activations tailored for Fortune 500 leaders.",
+      title: "Brand Activations & Launches",
+      subtitle: "Experiential Marketing",
+      description: "High-impact product launches, interactive brand booths, corporate annual conventions, and dealer meets designed to elevate corporate prestige.",
       icon: "Briefcase"
     },
     {
-      title: "Broadcast & Technical Direction",
-      subtitle: "Live Stream & Media Directing",
-      description: "Multi-camera live broadcast, real-time AR graphic overlays, satellite linkups, and seamless hybrid streaming infrastructure.",
+      title: "Exhibition Curation & Fabrications",
+      subtitle: "Trade Shows & Expos",
+      description: "Complete exhibition planning, custom stall design, structural fabrications, VIP inaugurations, and visitor flow management.",
+      icon: "Trophy"
+    },
+    {
+      title: "Fashion Shows & Special Events",
+      subtitle: "Runway & Stage Production",
+      description: "High-fashion runway design, precision audio-visual direction, concert sound engineering, and artist line-up management.",
       icon: "Video"
     }
   ],
 
   clientele: [
-    { name: "Coca Cola", category: "Beverages", tag: "Global Partner" },
-    { name: "Red Bull", category: "Energy & Sports", tag: "Event Production" },
-    { name: "Cricket Board", category: "Sports Governing Body", tag: "League Partner" },
-    { name: "Spotify", category: "Music & Entertainment", tag: "Concert Series" },
-    { name: "Samsung", category: "Technology", tag: "Product Launches" },
-    { name: "BMW", category: "Automotive", tag: "Experience Center" },
-    { name: "PWC", category: "Consulting", tag: "Global Summits" },
-    { name: "Bosch", category: "Engineering", tag: "Annual Convention" },
-    { name: "Tata Enterprises", category: "Conglomerate", tag: "Brand Activations" },
-    { name: "Nike", category: "Sportswear", tag: "Stadium Activations" },
-    { name: "Sony Music", category: "Entertainment", tag: "Artist Arena Tours" },
-    { name: "Royal Challengers", category: "Sports Franchise", tag: "Unbox Ceremonies" }
+    { name: "IIFD Surat", category: "Design Institute", tag: "Exhibition Partner" },
+    { name: "Utsav Vatika", category: "Luxury Venue", tag: "Wedding Venue Partner" },
+    { name: "Surat Trade Center", category: "Exhibition Hub", tag: "Event Venue" },
+    { name: "Jewelers Association", category: "Corporate", tag: "Annual Gala" },
+    { name: "Textile Leaders Forum", category: "Industry Guild", tag: "Brand Launch" },
+    { name: "Real Estate Guild", category: "Corporate", tag: "Property Expo" }
   ],
 
   leadership: {
-    quote: "“You are only as good as your last show.”",
-    founderName: "Dr. T. Venkat Vardhan",
-    founderRole: "Founder & Managing Director",
-    bio: "A visionary disruptor with over four decades of pioneering leadership in live music, mega sports events, and world-class entertainment infrastructure. Under his guidance, COLOURS has delivered over 10,000 landmark events.",
+    quote: "“Every celebration is a canvas of emotions, precision, and unforgettable memories.”",
+    founderName: "Founding Team",
+    founderRole: "Colours Events & Activations Leadership",
+    bio: "Based in Piplod, Surat, Colours Events & Activations is built on a passion for creative storytelling, flawless logistics, and bespoke event design. Having delivered over 680+ events, the team turns celebrations into lifetime memories.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
-    signatureText: "Venkat Vardhan"
+    signatureText: "Colours Leadership"
   },
 
   contact: {
-    email: "connect@colourevents.com",
-    phone: "+91 80 4112 8888",
-    address: "COLOURS Corporate Tower, Indiranagar, Bengaluru, KA 560038",
+    email: "colourseventsofficial@gmail.com",
+    phone: "+91 92282 08528",
+    address: "Colours House, Sai Kutir, Plot No. 5, Udhana-Magdalla Road, Piplod, Surat, Gujarat - 395007",
     socials: [
-      { name: "Instagram", url: "https://instagram.com" },
-      { name: "LinkedIn", url: "https://linkedin.com" },
-      { name: "YouTube", url: "https://youtube.com" },
-      { name: "X", url: "https://x.com" }
+      { name: "Instagram", url: "https://www.instagram.com/colourseventsofficial/" },
+      { name: "Facebook", url: "https://www.facebook.com" },
+      { name: "WhatsApp", url: "https://wa.me/919228208528" }
     ]
   }
 };
