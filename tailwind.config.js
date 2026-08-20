@@ -8,25 +8,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#050507",
-        foreground: "#f5f5f7",
-        card: "#0d0d12",
+        background: "#08090d",
+        foreground: "#ffffff",
+        card: "#0e1017",
         brand: {
-          red: "#e52d27",
-          crimson: "#b31217",
-          gold: "#d4af37",
-          dark: "#050507",
-          surface: "#111116",
-          border: "rgba(255, 255, 255, 0.1)",
+          red: "#e52d27",      // Vibrant Signature Red
+          crimson: "#b31217",  // Deep Ruby Red
+          gold: "#d4af37",     // Accent Gold
+          dark: "#08090d",
+          surface: "#0e1017",
+          border: "rgba(229, 45, 39, 0.3)",
         },
       },
       fontFamily: {
-        sans: ["var(--font-golos)", "system-ui", "sans-serif"],
-        heading: ["var(--font-outfit)", "system-ui", "sans-serif"],
-        // Micro-labels/tags across the whole site use `font-mono` in Tailwind
-        // classes — remapping it from a typewriter monospace to the premium
-        // Outfit sans instantly upgrades every uppercase label site-wide.
-        mono: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        sans: ["var(--font-jakarta)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
+        heading: ["var(--font-syne)", "Syne", "system-ui", "sans-serif"],
+        serif: ["var(--font-cinzel)", "Cinzel", "serif"],
+        mono: ["var(--font-space)", "Space Grotesk", "monospace"],
       },
       keyframes: {
         marquee: {
@@ -34,8 +32,8 @@ module.exports = {
           "100%": { transform: "translateX(-50%)" },
         },
         pulseGlow: {
-          "0%, 100%": { opacity: 0.4, transform: "scale(1)" },
-          "50%": { opacity: 0.8, transform: "scale(1.05)" },
+          "0%, 100%": { opacity: 0.35, transform: "scale(1)" },
+          "50%": { opacity: 0.7, transform: "scale(1.06)" },
         },
       },
       animation: {

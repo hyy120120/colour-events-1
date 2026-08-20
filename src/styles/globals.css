@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-golos: 'Golos Text', sans-serif;
-  /* Headings & labels now also use Golos Text (matches dnanetworks.com) —
-     variable names kept as-is so no component files need to change. */
-  --font-outfit: 'Golos Text', sans-serif;
-  --font-mono: 'Golos Text', sans-serif;
+  --font-syne: 'Syne', sans-serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --color-red: #e52d27;
+  --color-crimson: #b31217;
+  --color-bg: #08090d;
 }
 
 * {
@@ -19,18 +21,19 @@
 }
 
 html {
-  background-color: #050507;
-  color: #f5f5f7;
-  font-family: var(--font-golos);
+  background-color: #08090d;
+  color: #ffffff;
+  font-family: var(--font-jakarta);
 }
 
 body {
-  background-color: #050507;
-  color: #f5f5f7;
+  background-color: #08090d;
+  color: #ffffff;
   overflow-x: hidden;
+  font-family: var(--font-jakarta);
 }
 
-/* Lenis Smooth Scroll CSS Rules */
+/* Lenis Smooth Scroll Rules */
 html.lenis, html.lenis body {
   height: auto;
 }
@@ -56,48 +59,56 @@ html.lenis, html.lenis body {
   width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #050507;
+  background: #08090d;
 }
 ::-webkit-scrollbar-thumb {
-  background: #22222a;
+  background: #1c1f2e;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #e52d27;
 }
 
-/* Design Tokens */
+/* Design Tokens - DNA Networks Signature Typography & Palette */
 .heading-primary {
-  font-family: var(--font-outfit);
-  font-size: clamp(2.25rem, 5vw, 4.25rem);
-  font-weight: 900;
+  font-family: var(--font-syne);
+  font-size: clamp(2.35rem, 5.2vw, 4.35rem);
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1.08;
   color: #ffffff;
 }
 
 .sub-title {
-  font-family: var(--font-outfit);
-  font-size: clamp(1.25rem, 2.5vw, 2.25rem);
+  font-family: var(--font-syne);
+  font-size: clamp(1.35rem, 2.8vw, 2.4rem);
   font-weight: 700;
-  line-height: 1.25;
-  color: #f5f5f7;
+  line-height: 1.2;
+  color: #ffffff;
 }
 
 .title-micro {
-  font-family: var(--font-mono);
+  font-family: var(--font-space);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   color: #e52d27;
 }
 
+.description-body {
+  font-family: var(--font-jakarta);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
 .label-small {
-  font-family: var(--font-golos);
+  font-family: var(--font-jakarta);
   font-size: 0.8rem;
-  color: #a1a1aa;
+  color: #a0a0ab;
   letter-spacing: 0.05em;
 }
 
@@ -114,7 +125,7 @@ html.lenis, html.lenis body {
   bottom: -4px;
   left: 0;
   width: 0%;
-  height: 1.5px;
+  height: 2px;
   background-color: #e52d27;
   transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -123,18 +134,19 @@ html.lenis, html.lenis body {
   width: 100%;
 }
 
-/* Glassmorphism */
+/* Glassmorphism & Surface Design Tokens */
 .glass-panel {
-  background: rgba(13, 13, 18, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(14, 16, 23, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(229, 45, 39, 0.25);
 }
 
 .glass-nav {
-  background: rgba(5, 5, 7, 0.85);
+  background: rgba(8, 9, 13, 0.88);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(229, 45, 39, 0.25);
 }
 
 /* Effect Ruby Hover Style */
@@ -142,7 +154,7 @@ html.lenis, html.lenis body {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  background: #0d0d12;
+  background: #0e1017;
 }
 
 .effect-ruby img {
@@ -158,11 +170,12 @@ html.lenis, html.lenis body {
   position: absolute;
   inset: 0;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(5,5,7,0.95) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(229, 45, 39, 0.85) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   transition: opacity 0.4s ease;
+  color: #ffffff;
 }
 
 .effect-ruby::after {
@@ -172,7 +185,7 @@ html.lenis, html.lenis body {
   left: -150%;
   width: 75%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(229, 45, 39, 0.35), transparent);
   transform: skewX(-25deg);
   transition: left 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -181,99 +194,86 @@ html.lenis, html.lenis body {
   left: 175%;
 }
 
-/* Premium Editorial Clientele Section (Light, marker-highlight style) */
-.clientele-light-section {
-  background: #ffffff;
-  color: #111114;
+/* 3D Flip Card Effect for Clientele Grid */
+.logo-card-perspective {
+  perspective: 1000px;
 }
 
-/* Highlighter marker effect behind heading lines */
-.marker-heading span {
-  background: #d9d9de;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  padding: 0.05em 0.18em;
-  color: #111114;
-}
-
-.client-cell {
+.logo-card-inner {
   position: relative;
-  min-height: 210px;
-  padding: 1.75rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.logo-card-perspective:hover .logo-card-inner {
+  transform: rotateY(180deg);
+}
+
+.logo-card-front,
+.logo-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  transition: background-color 0.4s ease;
-}
-
-.client-cell:hover {
-  background: #fafafa;
-}
-
-.client-cell-label {
-  font-family: var(--font-outfit);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #111114;
-}
-
-.client-cell-rule {
-  width: 100%;
-  height: 1px;
-  background: #e5e5e8;
-  margin: 0.9rem 0 0;
-}
-
-.client-cell-body {
-  flex: 1;
-  display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
 }
 
-.client-cell-wordmark {
-  font-family: var(--font-outfit);
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: #1c1c22;
-  text-align: center;
+.logo-card-front {
+  background: rgba(14, 16, 23, 0.8);
+  border: 1px solid rgba(229, 45, 39, 0.25);
+  color: #ffffff;
 }
 
-/* Custom Button Styling */
+.logo-card-back {
+  background: linear-gradient(135deg, #e52d27 0%, #b31217 100%);
+  border: 1px solid #ff4d4d;
+  transform: rotateY(180deg);
+  color: #ffffff;
+}
+
+/* Custom Primary Button Styling (DNA Networks Signature Style) */
 .btn-primary {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.95rem 2rem;
-  font-family: var(--font-outfit);
+  padding: 0.95rem 2.2rem;
+  font-family: var(--font-space);
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.8rem;
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #e52d27;
+  border: 1px solid #e52d27;
   border-radius: 9999px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 0 8px 25px rgba(229, 45, 39, 0.35);
 }
 
 .btn-primary:hover {
-  background: #e52d27;
-  border-color: #e52d27;
-  box-shadow: 0 12px 35px rgba(229, 45, 39, 0.4);
+  background: #b31217;
+  border-color: #ff4d4d;
+  color: #ffffff;
+  box-shadow: 0 12px 35px rgba(229, 45, 39, 0.55);
   transform: translateY(-2px);
 }
 
 .btn-primary .btn-arrow {
   transition: transform 0.35s ease;
+  color: #ffffff;
 }
 
 .btn-primary:hover .btn-arrow {
   transform: translateX(6px);
+  color: #ffffff;
 }
