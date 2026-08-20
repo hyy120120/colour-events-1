@@ -166,6 +166,8 @@ export const siteConfig = {
     address: "Colours House, Sai Kutir, Plot No. 5, Udhana-Magdalla Road, Piplod, Surat, Gujarat - 395007",
     socials: [
       { name: "Instagram", url: "https://www.instagram.com/colourseventsofficial/" },
+      { name: "LinkedIn", url: "https://www.linkedin.com" },
+      { name: "YouTube", url: "https://www.youtube.com" },
       { name: "Facebook", url: "https://www.facebook.com" },
       { name: "WhatsApp", url: "https://wa.me/919228208528" }
     ]
