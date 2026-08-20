@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 import MegaMenu from "./MegaMenu";
 
@@ -23,7 +22,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mega menu is active
+  // Lock body scroll when mega menu is active without layout shift
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -34,45 +33,63 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Permanent Fixed Top Header at z-[999] - Expanded Full-Width Spacing */}
       <header
-        className={`fixed top-0 left-0 right-0 z-[800] transition-all duration-500 ${
-          isScrolled
-            ? "glass-nav py-3.5 border-b border-white/10 shadow-2xl"
-            : "bg-gradient-to-b from-black/60 via-black/20 to-transparent py-5"
+        className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-500 ${
+          isScrolled || isMenuOpen
+            ? "glass-nav py-3.5 shadow-2xl"
+            : "bg-gradient-to-b from-[#08090d]/90 via-[#08090d]/30 to-transparent py-5"
         }`}
       >
-        <div className="w-full px-4 md:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo / Brand Name */}
-          <Link href="/" className="flex items-center gap-3.5 group">
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 md:px-12 flex items-center justify-between">
+          {/* Logo / Brand Name - Pushed Left */}
+          <Link
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
+            className="flex items-center gap-3.5 group"
+          >
             <div className="relative w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src={siteConfig.logoUrl}
                 alt={siteConfig.brandName}
                 fill
                 priority
-                className="object-contain drop-shadow-[0_0_15px_rgba(229,45,39,0.5)]"
+                className="object-contain drop-shadow-[0_0_20px_rgba(229,45,39,0.7)]"
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-black text-xl md:text-2xl tracking-wider text-white group-hover:text-red-400 transition-colors">
+              <span className="font-heading font-black text-xl md:text-2xl tracking-wider text-white group-hover:text-[#e52d27] transition-colors">
                 {siteConfig.brandName}
               </span>
-              <span className="text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold -mt-1">
+              <span className="text-[9px] uppercase tracking-[0.25em] text-[#e52d27] font-bold -mt-1">
                 {siteConfig.brandSubtitle}
               </span>
             </div>
           </Link>
 
-          {/* Single Menu Button Control */}
+          {/* 3-Lines Hamburger Toggle Button - Pushed Right */}
           <button
-            onClick={() => setIsMenuOpen(true)}
-            className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 hover:bg-red-600/20 border border-white/15 hover:border-red-500 transition-all duration-300 group"
-            aria-label="Open Menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="relative flex flex-col items-center justify-center w-11 h-11 md:w-12 md:h-12 rounded-full bg-[#0e1017] hover:bg-[#e52d27] border border-[#e52d27]/40 hover:border-[#e52d27] transition-all duration-300 shadow-xl group cursor-pointer"
+            aria-label="Toggle Menu"
           >
-            <span className="text-xs uppercase tracking-widest font-extrabold text-white group-hover:text-red-400">
-              Menu
-            </span>
-            <Menu className="w-5 h-5 text-red-500 group-hover:rotate-90 transition-transform duration-300" />
+            <div className="flex flex-col gap-1.5 items-center justify-center w-5">
+              <span
+                className={`h-[2px] w-5 bg-white transition-all duration-300 transform ${
+                  isMenuOpen ? "rotate-45 translate-y-[8px] bg-white" : "group-hover:bg-white"
+                }`}
+              />
+              <span
+                className={`h-[2px] w-5 bg-white transition-all duration-300 ${
+                  isMenuOpen ? "opacity-0 scale-x-0" : "group-hover:bg-white"
+                }`}
+              />
+              <span
+                className={`h-[2px] w-5 bg-white transition-all duration-300 transform ${
+                  isMenuOpen ? "-rotate-45 -translate-y-[8px] bg-white" : "group-hover:bg-white"
+                }`}
+              />
+            </div>
           </button>
         </div>
       </header>
