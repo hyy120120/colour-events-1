@@ -43,11 +43,6 @@ export const siteConfig = {
       hoverImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200"
     },
     { 
-      label: "Clientele", 
-      href: "/#clientele",
-      hoverImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200"
-    },
-    { 
       label: "Contact", 
       href: "/contact",
       hoverImage: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=1200"
