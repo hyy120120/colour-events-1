@@ -22,9 +22,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-jakarta)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
-        heading: ["var(--font-syne)", "Syne", "system-ui", "sans-serif"],
+        heading: ["var(--font-outfit)", "Outfit", "system-ui", "sans-serif"],
         serif: ["var(--font-cinzel)", "Cinzel", "serif"],
-        mono: ["var(--font-space)", "Space Grotesk", "monospace"],
+        mono: ["var(--font-outfit)", "Outfit", "sans-serif"],
       },
       keyframes: {
         marquee: {

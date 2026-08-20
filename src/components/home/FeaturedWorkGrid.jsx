@@ -19,32 +19,29 @@ export default function FeaturedWorkGrid() {
       : siteConfig.projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="featured-work" className="py-28 md:py-36 bg-white text-[#111116] border-t border-gray-200">
+    <section id="featured-work" className="py-24 md:py-32 bg-white text-[#111116] border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[2px] bg-[#e52d27]" />
-              <span className="title-micro text-[#e52d27]">
-                Portfolio Showcase
-              </span>
-            </div>
-            <h2 className="heading-primary text-[#111116]">
-              Featured Events
-            </h2>
+        
+        {/* Header Line - PORTFOLIO SHOWCASE on Left & Filter Pills Aligned on the exact same Right Side Line */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12">
+          {/* Left: PORTFOLIO SHOWCASE */}
+          <div className="flex items-center gap-3">
+            <span className="w-8 h-[2px] bg-[#e52d27]" />
+            <span className="title-micro text-[#e52d27]">
+              Portfolio Showcase
+            </span>
           </div>
 
-          {/* Filter Pills tuned for White Background */}
-          <div className="flex flex-wrap gap-2.5">
+          {/* Right Side Filter Pills aligned on the exact same line */}
+          <div className="flex flex-wrap items-center gap-2.5 sm:ml-auto">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-widest transition-all ${
+                className={`px-5 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-widest transition-all ${
                   selectedCategory === cat
-                    ? "bg-[#e52d27] text-white border border-[#e52d27] shadow-lg shadow-[#e52d27]/30 scale-105"
-                    : "bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300"
+                    ? "bg-[#e52d27] text-white border border-[#e52d27] shadow-md"
+                    : "bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-200"
                 }`}
               >
                 {cat}
@@ -53,17 +50,19 @@ export default function FeaturedWorkGrid() {
           </div>
         </div>
 
-        {/* Work Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence>
+        {/* Work Grid with In-Place Fade Transition (No distance flying or jumping across rows) */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedCategory}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {filteredProjects.map((project) => (
-              <motion.div
+              <div
                 key={project.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4 }}
                 onClick={() => setActiveModalProject(project)}
                 className="group cursor-pointer"
               >
@@ -96,10 +95,11 @@ export default function FeaturedWorkGrid() {
                     </div>
                   </figcaption>
                 </figure>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
+
       </div>
 
       {/* Modal Lightbox */}
