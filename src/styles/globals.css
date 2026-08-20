@@ -7,6 +7,7 @@
 :root {
   --font-golos: 'Golos Text', sans-serif;
   --font-outfit: 'Outfit', sans-serif;
+  --font-mono: 'Outfit', sans-serif;
 }
 
 * {

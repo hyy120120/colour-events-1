@@ -23,6 +23,10 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-golos)", "system-ui", "sans-serif"],
         heading: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        // Micro-labels/tags across the whole site use `font-mono` in Tailwind
+        // classes — remapping it from a typewriter monospace to the premium
+        // Outfit sans instantly upgrades every uppercase label site-wide.
+        mono: ["var(--font-outfit)", "system-ui", "sans-serif"],
       },
       keyframes: {
         marquee: {
