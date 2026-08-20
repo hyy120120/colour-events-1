@@ -18,19 +18,19 @@ export default function FeaturedWorkGrid() {
       ? siteConfig.projects
       : siteConfig.projects.filter((p) => p.category === selectedCategory);
 
-  return (
-    <section id="featured-work" className="py-28 bg-[#050507] text-white border-t border-white/5">
+    return (
+    <section id="featured-work" className="clientele-light-section py-28 border-t border-black/5">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[1px] bg-red-500" />
-              <span className="text-xs uppercase tracking-[0.3em] font-mono text-red-500 font-bold">
+              <span className="w-8 h-[1px] bg-[#d4af37]" />
+              <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#d4af37] font-bold">
                 Portfolio Showcase
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-black font-heading tracking-tight uppercase">
+            <h2 className="text-4xl md:text-6xl font-black font-heading tracking-tight uppercase text-[#111114]">
               Featured Events
             </h2>
           </div>
@@ -43,8 +43,8 @@ export default function FeaturedWorkGrid() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest transition-all ${
                   selectedCategory === cat
-                    ? "bg-red-600 text-white shadow-lg shadow-red-600/30 scale-105"
-                    : "bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white border border-white/10"
+                    ? "bg-red-600 text-white shadow-lg shadow-red-600/20 scale-105"
+                    : "bg-black/5 hover:bg-black/10 text-gray-500 hover:text-black border border-black/10"
                 }`}
               >
                 {cat}
@@ -67,7 +67,7 @@ export default function FeaturedWorkGrid() {
                 onClick={() => setActiveModalProject(project)}
                 className="group cursor-pointer"
               >
-                <figure className="effect-ruby h-[380px] rounded-2xl border border-white/10">
+                <figure className="effect-ruby h-[380px] rounded-2xl border border-black/10">
                   <Image
                     src={project.coverImage}
                     alt={project.title}

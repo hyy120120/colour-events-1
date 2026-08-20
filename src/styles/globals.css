@@ -6,8 +6,10 @@
 
 :root {
   --font-golos: 'Golos Text', sans-serif;
-  --font-outfit: 'Outfit', sans-serif;
-  --font-mono: 'Outfit', sans-serif;
+  /* Headings & labels now also use Golos Text (matches dnanetworks.com) —
+     variable names kept as-is so no component files need to change. */
+  --font-outfit: 'Golos Text', sans-serif;
+  --font-mono: 'Golos Text', sans-serif;
 }
 
 * {
